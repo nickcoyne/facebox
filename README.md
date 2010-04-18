@@ -6,6 +6,8 @@ Facebox is a jQuery-based, Facebook-style lightbox which can display images, div
 
 ![Sample Image](http://share.kyleneath.com/captures/Facebox_1.2-20100417-190352.jpg)
 
+[Download the latest release](http://github.com/kneath/facebox/zipball/cssified)
+
 ## Usage
 
 Include jQuery, `src/facebox.js` and `src/facebox.css`. Then tell facebox where you've put `src/loading.gif` and `src/closelabel.png`
@@ -76,3 +78,7 @@ Simply bind a function to any of these hooks:
 You can give the facebox container an extra class (to fine-tune the display of the facebox) with the facebox[.class] rel syntax.
 
     <a href="remote.html" rel="facebox[.bolder]">text</a>
+
+## Contact & Help
+
+If you have questions, feel free to ask on the [Google Groups Mailing List](http://groups.google.com/group/facebox/). Alternatively if you find a bug, you can [open an issue](http://github.com/kneath/facebox/issues) on my fork.
