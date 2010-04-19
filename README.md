@@ -1,12 +1,23 @@
 # Facebox
 
-This is my fork of [defunkt/facebox](http://github.com/defunkt/facebox) to reduce use of images and rely more on CSS.
+This is my fork of [defunkt/facebox](http://github.com/defunkt/facebox) to reduce use of images and rely more on CSS. [See it in action](http://kneath.github.com/facebox/examples/).
 
 Facebox is a jQuery-based, Facebook-style lightbox which can display images, divs, or entire remote pages.
 
 ![Sample Image](http://share.kyleneath.com/captures/Facebox_1.2-20100417-190352.jpg)
 
 [Download the latest release](http://github.com/kneath/facebox/zipball/cssified)
+## Compatibility
+
+This release relies on a lot of advanced CSS techniques (box-shadow, border-radius, RGBA). That being said, it's compatible with many browsers.
+
+* **Safari 4**
+* **Webkit Nightlies** (Chromium, Chrome) as of 4/17/10
+* **Firefox 3.5**
+* **IE8** (degraded experience)
+* **IE7** (degraded experience)
+* IE6 - I just don't care
+* Opera - I just don't care
 
 ## Usage
 
