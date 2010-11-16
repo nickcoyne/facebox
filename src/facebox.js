@@ -280,7 +280,7 @@
   }
 
   function hideOverlay() {
-    if (skipOverlay()) return
+    if (skipOverlay()) return false
 
     $('#facebox_overlay').fadeOut(200, function(){
       $("#facebox_overlay").removeClass("facebox_overlayBG")
@@ -288,7 +288,7 @@
       $("#facebox_overlay").remove()
     })
 
-    return false
+    return true
   }
 
   /*
@@ -301,6 +301,7 @@
       $('#facebox .content').removeClass().addClass('content')
       hideOverlay()
       $('#facebox .loading').remove()
+	$(document).trigger('afterClose.facebox');
     })
   })
 
