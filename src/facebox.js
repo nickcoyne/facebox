@@ -82,12 +82,15 @@
 
   $.extend($.facebox, {
     settings: {
-      opacity      : 0.2,
-      overlay      : true,
-      loadingImage : '/facebox/loading.gif',
-      closeImage   : '/facebox/closelabel.png',
-      imageTypes   : [ 'png', 'jpg', 'jpeg', 'gif' ],
-      faceboxHtml  : '\
+      opacity           : 0.2,
+      overlay           : true,
+      loadingImage      : '/facebox/loading.gif',
+      closeImage        : '/facebox/closelabel.png',
+      imageTypes        : [ 'png', 'jpg', 'jpeg', 'gif' ],
+      posTopDivisor     : 10,
+      posLeftOffset     : 205,
+      verticalAlignment : 'default', // 'default', 'center'
+      faceboxHtml       : '\
     <div id="facebox" style="display:none;"> \
       <div class="popup"> \
         <div class="content"> \
@@ -107,8 +110,8 @@
         append('<div class="loading"><img src="'+$.facebox.settings.loadingImage+'"/></div>')
 
       $('#facebox').css({
-        top:	getPageScroll()[1] + (getPageHeight() / 10),
-        left:	$(window).width() / 2 - 205
+        top:	getPageScroll()[1] + (getPageHeight() / $.facebox.settings.posTopDivisor),
+        left:	$(window).width() / 2 - $.facebox.settings.posLeftOffset
       }).show()
 
       $(document).bind('keydown.facebox', function(e) {
@@ -125,6 +128,9 @@
       $('#facebox .loading').remove()
       $('#facebox .body').children().fadeIn('normal')
       $('#facebox').css('left', $(window).width() / 2 - ($('#facebox .popup').width() / 2))
+      if ($.facebox.settings.verticalAlignment == 'center') {
+        $('#facebox').css('top', $(window).height() / 2 - ($('#facebox .popup').height() / 2))
+      }
       $(document).trigger('reveal.facebox').trigger('afterReveal.facebox')
     },
 
