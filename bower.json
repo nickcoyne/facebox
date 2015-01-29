@@ -1,0 +1,29 @@
+{
+  "name": "facebox",
+  "main": [
+    "./src/facebox.js",
+    "./src/facebox.css"
+  ],
+  "version": "1.2",
+  "homepage": "https://github.com/nickcoyne/facebox",
+  "authors": [
+    "Chris Wanstrath <chris@ozmm.org>",
+    "Mal Curtis <mal@mal.co.nz>"
+  ],
+  "description": "This is a bower enabled fork of facebox",
+  "keywords": [
+    "facebox"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "README.md"
+  ],
+  "dependencies": {
+    "jquery": ">=1.2.0"
+  }
+}
